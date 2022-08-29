@@ -1,24 +1,36 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: 'Arial ', cursive;
+    font-family: 'Helvetica';
 }
 
 .background {
-    background-color: #afafaf;
+    background-color: #000000;
     height: 100vh;
     padding-top: 1px;
 }
 
+.X {
+    color: rgb(255, 255, 255);
+}
+
+.O {
+    color: rgb(242, 247, 153);
+}
+
 .title {
-    color: rgb(65, 65, 65);
+    color: rgb(207, 211, 137);
     text-align: center;
-    font-size: 40px;
+    font-size: 50px;
     margin-top: 10%;
 }
 
+.title-text {
+    font-weight: 800;
+
+}
 .display {
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 25px;
     text-align: center;
     margin-top: 1em;
@@ -36,11 +48,10 @@
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: 33% 33% 33%;
     max-width: 300px;
-
 }
 
 .tile {
-    border: 1px solid white;
+    border: 1px solid rgb(248, 247, 247);
     min-width: 100px;
     min-height: 100px;
     display: flex;
@@ -48,6 +59,7 @@
     align-items: center;
     font-size: 50px;
     cursor: pointer;
+    border-radius: 10%;
 }
 
 .controls {
@@ -59,20 +71,16 @@
 }
 
 .controls button {
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 8px;
-    border-radius: 8px;
+    border-radius: 4px;
     border: none;
     font-size: 20px;
     margin-left: 1em;
     cursor: pointer;
 }
 
-.restart {
-    background-color: #498AFB;
-}
 
 #reset {
-    margin-top: 2.5%;
-    background-color: #939393;
+    background-color: rgb(122, 124, 77);
 }

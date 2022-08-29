@@ -56,13 +56,13 @@ window.addEventListener('DOMContentLoaded', () => {
     function announce(type) {
         switch(type){
             case PLAYERO_WON:
-                announcer.innerHTML = 'O Won';
+                announcer.innerHTML = 'O Won!';
                 break;
             case PLAYERX_WON:
-                announcer.innerHTML = 'X Won';
+                announcer.innerHTML = 'X Won!';
                 break;
             case TIE:
-                announcer.innerText = 'Tie';
+                announcer.innerText = 'It\'s a Tie!';
         }
         announcer.classList.remove('hide');
     };
@@ -92,6 +92,9 @@ window.addEventListener('DOMContentLoaded', () => {
         if(isValidAction(tile) && isGameActive) {
             tile.innerText = currentPlayer;
             tile.classList.add(`${currentPlayer}`);
+            console.log({currentPlayer})
+            console.log({tile})
+
             updateBoard(index);
             handleResultValidation();
             changePlayer();
@@ -109,8 +112,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
         tiles.forEach(tile => {
             tile.innerText = '';
-            tile.classList.remove('playerX');
-            tile.classList.remove('playerO');
+            tile.classList.remove('X');
+            tile.classList.remove('O');
         });
     }
 
